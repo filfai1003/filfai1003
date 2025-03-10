@@ -11,6 +11,4 @@
 
 🤝 Open to collaborating on any cool AI, data science, or software dev projects!
 
-📫 Feel free to contact me: [LinkedIn](https://www.linkedin.com/in/filippo-faiella-876310329/)
-
 🎯 After my bachelor’s, I’m aiming to join a company where I can code non-stop and keep pushing boundaries.
