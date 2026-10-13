@@ -58,7 +58,7 @@ React 19 + TypeScript frontend (~6,900 lines), a 12-endpoint REST API in R Plumb
 a PostgreSQL schema with integrity triggers, and ~40 test files written test-first.
 <sub>Proprietary code, not public.</sub>
 
-#### 🏋️ FFT · training & diet app (in progress)
+#### 🏋️ FFT · training & diet app
 [github.com/filfai1003/FFT](https://github.com/filfai1003/FFT)  
 📱 Try it on Android: [fft.up.railway.app](https://fft.up.railway.app/)  
 A working mobile app for workouts, nutrition and progress tracking. It is free to use today, and its architecture is ready for a future premium tier.
