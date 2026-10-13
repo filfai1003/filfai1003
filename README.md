@@ -5,7 +5,7 @@ Haute École Léonard de Vinci in 2026. I like building complete products, from 
 to the screen, and I care about tests, security and shipping things that actually get used.
 
 - 💼 Open to **full-stack, web and software developer** roles in Belgium (on-site, hybrid or remote)
-- 🧪 Test-driven by habit: Vitest, Jest, pytest, testthat
+- 🧪 Test-driven by habit: Vitest, Jest, testthat, pgTAP
 - 🤖 Into AI, VR, 3D printing, drones, and automating anything I do twice
 - 🌍 Italian (native) · French (C2) · English (C1)
 - 🤽 Water polo player and former youth coach
@@ -27,24 +27,24 @@ to the screen, and I care about tests, security and shipping things that actuall
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-443E38?style=flat-square&logo=react&logoColor=white)
 ![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
 
 **Backend & data**<br>
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Fastify](https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
 ![REST API](https://img.shields.io/badge/REST_API-005571?style=flat-square)
 
 **DevOps & tools**<br>
+![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black)
 ![Keycloak](https://img.shields.io/badge/Keycloak-4D4D4D?style=flat-square&logo=keycloak&logoColor=white)
 ![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white)
 
@@ -58,22 +58,18 @@ React 19 + TypeScript frontend (~6,900 lines), a 12-endpoint REST API in R Plumb
 a PostgreSQL schema with integrity triggers, and ~40 test files written test-first.
 <sub>Proprietary code, not public.</sub>
 
-#### 🎺 Marione · Discord bot (Python)
-A bot for my friends' server: plays each member's sound when they join a voice channel, runs a music player,
-a virtual economy with blackjack and robberies, auto-AFK handling, and an optional LLM agent.
-It stores its state in a Discord channel with self-healing JSON storage and daily backups, has a web dashboard with Discord OAuth,
-runs under pytest + GitHub Actions CI, and is deployed with Docker on Render.
-
-#### 🧽 MPC · management app for a cleaning business
-A real tool used by an independent holiday-home cleaning company: properties, owners, cleaning jobs, income, expenses and documents.
-It's an installable **offline-first PWA** (React + TanStack Query) backed by a **Fastify + PostgreSQL** API on Railway.
-Security was designed in from the start: scrypt password hashing, revocable sessions, a strict CSP, per-IP rate limiting,
-account lockout and a database that is reachable only on the private network.
-
 #### 🏋️ FFT · training & diet app (in progress)
-A freemium mobile app for workouts, nutrition and progress tracking, built with **Expo / React Native + TypeScript** and **Supabase**
-(Postgres, Auth, Row Level Security, versioned migrations). Workouts keep working offline and sync later, health data is handled with GDPR in mind,
-and food search uses Open Food Facts. Builds and deploys run through GitHub Actions.
+A freemium mobile app for workouts, nutrition and progress tracking, designed and built end to end.
+
+- **Stack:** Expo / React Native, TypeScript in strict mode, Expo Router, TanStack Query, Zustand, i18next, Supabase (Postgres, Auth, Storage, Edge Functions)
+- **Local-first:** the free tier keeps all data on the device, in a local store that mirrors the Supabase query API, so the same code runs with or without an account. Active workouts survive going offline.
+- **Database:** versioned SQL migrations, Row Level Security on every table (a test fails if one is missing), and health-safety rules enforced both in TypeScript and as database constraints
+- **Quality:** 207 Jest tests plus 25 database checks on an embedded Postgres, ESLint, Prettier, and zero `any` in the codebase
+- **CI/CD:** GitHub Actions gates every push on lint, typecheck and tests, then ships an over-the-air update or a new APK build (EAS) depending on whether the native code changed
+- **Product care:** accessibility settings (text scale, high contrast, reduced motion, one-hand mode), undo on every important action, and health data handled with GDPR in mind
+
+#### 🧩 Smaller side projects
+A Discord bot for my friends' server (Python, pytest, GitHub Actions) and a small management app for a cleaning business (React, Node.js, PostgreSQL).
 
 ---
 
