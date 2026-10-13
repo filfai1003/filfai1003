@@ -59,7 +59,7 @@ a PostgreSQL schema with integrity triggers, and ~40 test files written test-fir
 <sub>Proprietary code, not public.</sub>
 
 #### 🏋️ FFT · training & diet app (in progress)
-A freemium mobile app for workouts, nutrition and progress tracking, designed and built end to end.
+A working mobile app for workouts, nutrition and progress tracking, designed and built end to end. It is free to use today, and its architecture is ready for a future premium tier.
 
 - **Stack:** Expo / React Native, TypeScript in strict mode, Expo Router, TanStack Query, Zustand, i18next, Supabase (Postgres, Auth, Storage, Edge Functions)
 - **Local-first:** the free tier keeps all data on the device, in a local store that mirrors the Supabase query API, so the same code runs with or without an account. Active workouts survive going offline.
