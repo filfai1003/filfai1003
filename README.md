@@ -61,9 +61,9 @@ a PostgreSQL schema with integrity triggers, and ~40 test files written test-fir
 #### 🏋️ FFT · training & diet app (in progress)
 [github.com/filfai1003/FFT](https://github.com/filfai1003/FFT)  
 📱 Try it on Android: [fft.up.railway.app](https://fft.up.railway.app/)  
-Built with an AI-assisted workflow I designed: see How I built it in the repo.
+A working mobile app for workouts, nutrition and progress tracking. It is free to use today, and its architecture is ready for a future premium tier.
 
-A working mobile app for workouts, nutrition and progress tracking, designed and built end to end. It is free to use today, and its architecture is ready for a future premium tier.
+**How it was built:** I designed the product, the data model, the architecture and the engineering rules. Most of the code was written by Claude Code under my direction, and nothing ships unless the automated checks pass. See *How I built it* in the repo.
 
 - **Stack:** Expo / React Native, TypeScript in strict mode, Expo Router, TanStack Query, Zustand, i18next, Supabase (Postgres, Auth, Storage, Edge Functions)
 - **Local-first:** the free tier keeps all data on the device, in a local store that mirrors the Supabase query API, so the same code runs with or without an account. Active workouts survive going offline.
