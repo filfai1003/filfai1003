@@ -58,12 +58,14 @@ React 19 + TypeScript frontend (~6,900 lines), a 12-endpoint REST API in R Plumb
 a PostgreSQL schema with integrity triggers, and ~40 test files written test-first.
 <sub>Proprietary code, not public.</sub>
 
-#### 🏋️ FFT · training & diet app
-[github.com/filfai1003/FFT](https://github.com/filfai1003/FFT)  
-📱 Try it on Android: [fft.up.railway.app](https://fft.up.railway.app/)  
+#### 🏋️ FFT · training & diet app (actively developed)
+🌐 Try it in your browser: [web-fft.up.railway.app](https://web-fft.up.railway.app)  
+📱 Install it on Android: [fft.up.railway.app](https://fft.up.railway.app/)  
+<sub>Source code is private; happy to walk through it in an interview.</sub>
+
 A working mobile app for workouts, nutrition and progress tracking. It is free to use today, and its architecture is ready for a future premium tier.
 
-**How it was built:** I designed the product, the data model, the architecture and the engineering rules. Most of the code was written by Claude Code under my direction, and nothing ships unless the automated checks pass. See *How I built it* in the repo.
+**How it was built:** I designed the product, the data model, the architecture and the engineering rules. Most of the code was written by Claude Code under my direction, and nothing ships unless the automated checks pass.
 
 - **Stack:** Expo / React Native, TypeScript in strict mode, Expo Router, TanStack Query, Zustand, i18next, Supabase (Postgres, Auth, Storage, Edge Functions)
 - **Local-first:** the free tier keeps all data on the device, in a local store that mirrors the Supabase query API, so the same code runs with or without an account. Active workouts survive going offline.
